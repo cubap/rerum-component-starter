@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'rerum',
   outputTargets:[
     {
       type: 'dist'

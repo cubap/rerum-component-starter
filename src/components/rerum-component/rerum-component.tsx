@@ -1,11 +1,11 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'rerum-component',
+  styleUrl: 'rerum-component.css',
   shadow: true
 })
-export class MyComponent {
+export class RerumComponent {
 
   @Prop() first: string;
   @Prop() last: string;
