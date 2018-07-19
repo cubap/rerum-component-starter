@@ -29,33 +29,32 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface RerumComponent {
-      'first': string;
-      'last': string;
+    interface RerumManifesto {
+      'manifestUrl': string;
     }
   }
 
-  interface HTMLRerumComponentElement extends StencilComponents.RerumComponent, HTMLStencilElement {}
+  interface HTMLRerumManifestoElement extends StencilComponents.RerumManifesto, HTMLStencilElement {}
 
-  var HTMLRerumComponentElement: {
-    prototype: HTMLRerumComponentElement;
-    new (): HTMLRerumComponentElement;
+  var HTMLRerumManifestoElement: {
+    prototype: HTMLRerumManifestoElement;
+    new (): HTMLRerumManifestoElement;
   };
   interface HTMLElementTagNameMap {
-    'rerum-component': HTMLRerumComponentElement;
+    'rerum-manifesto': HTMLRerumManifestoElement;
   }
   interface ElementTagNameMap {
-    'rerum-component': HTMLRerumComponentElement;
+    'rerum-manifesto': HTMLRerumManifestoElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'rerum-component': JSXElements.RerumComponentAttributes;
+      'rerum-manifesto': JSXElements.RerumManifestoAttributes;
     }
   }
   namespace JSXElements {
-    export interface RerumComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface RerumManifestoAttributes extends HTMLAttributes {
+      'manifestUrl'?: string;
+      'onLoadedManifest'?: (event: CustomEvent) => void;
     }
   }
 }
