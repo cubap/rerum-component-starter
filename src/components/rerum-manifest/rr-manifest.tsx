@@ -41,7 +41,6 @@ export class RerumManifest {
     // Dummy:
     const url = this.manifestUrl || "http://wellcomelibrary.org/iiif/b18035723/manifest";
 
-    // TODO: incorporate Manifesto... the initial attempt failed typescript importing.
 //    if (this.isServer === false) {
       const scr = document.createElement("script");
       let comp = this;
