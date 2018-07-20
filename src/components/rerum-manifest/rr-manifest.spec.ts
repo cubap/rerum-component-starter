@@ -1,28 +1,28 @@
 import { TestWindow } from '@stencil/core/dist/testing';
-import { RerumManifesto } from './rerum-manifesto';
+import { RerumManifest } from './rr-manifest';
 
-describe('rerum-manifesto', () => {
+describe('rr', () => {
   it('should build', () => {
-    expect(new RerumManifesto()).toBeTruthy();
+    expect(new RerumManifest()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLRerumManifestoElement;
+    let element: HTMLRrManifestoElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [RerumManifesto],
-        html: '<rerum-manifesto></rerum-manifesto>'
+        components: [RerumManifest],
+        html: '<rr-manifesto></rr-manifesto>'
       });
     });
 
-    it('should work without parameters', () => {
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m');
-    });
+    // it('should work without parameters', () => {
+    //   expect(element.textContent.trim()).toEqual('Hello, World! I\'m');
+    // });
 
     it('should work with a url', async () => {
-      element.manifest = 'http://wellcomelibrary.org/iiif/b18035723/manifest';
+      element.manifestUrl = 'http://wellcomelibrary.org/iiif/b18035723/manifest';
       await testWindow.flush();
       expect(element.textContent.trim()).toEqual('Hello, World! I\'m http://wellcomelibrary.org/iiif/b18035723/manifest');
     });

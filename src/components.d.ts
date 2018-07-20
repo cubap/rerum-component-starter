@@ -29,30 +29,30 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface RerumManifesto {
+    interface RrManifesto {
       'manifestUrl': string;
     }
   }
 
-  interface HTMLRerumManifestoElement extends StencilComponents.RerumManifesto, HTMLStencilElement {}
+  interface HTMLRrManifestoElement extends StencilComponents.RrManifesto, HTMLStencilElement {}
 
-  var HTMLRerumManifestoElement: {
-    prototype: HTMLRerumManifestoElement;
-    new (): HTMLRerumManifestoElement;
+  var HTMLRrManifestoElement: {
+    prototype: HTMLRrManifestoElement;
+    new (): HTMLRrManifestoElement;
   };
   interface HTMLElementTagNameMap {
-    'rerum-manifesto': HTMLRerumManifestoElement;
+    'rr-manifesto': HTMLRrManifestoElement;
   }
   interface ElementTagNameMap {
-    'rerum-manifesto': HTMLRerumManifestoElement;
+    'rr-manifesto': HTMLRrManifestoElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'rerum-manifesto': JSXElements.RerumManifestoAttributes;
+      'rr-manifesto': JSXElements.RrManifestoAttributes;
     }
   }
   namespace JSXElements {
-    export interface RerumManifestoAttributes extends HTMLAttributes {
+    export interface RrManifestoAttributes extends HTMLAttributes {
       'manifestUrl'?: string;
       'onLoadedManifest'?: (event: CustomEvent) => void;
     }
